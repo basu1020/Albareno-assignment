@@ -1,4 +1,4 @@
-# Albareno-assignment
+# Albareno-assignment-solutions
 
 ## Problem Two
 
@@ -57,7 +57,7 @@ const problemFive = (arr, k) => {
 }
 ```
 
-# Failed to solve 
+# Problems Failed to solve 
 
 ## Problem One
 This is my code for problem one which I unfortunately failed to solve 
