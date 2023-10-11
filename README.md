@@ -57,3 +57,70 @@ const problemFive = (arr, k) => {
 }
 ```
 
+# Failed to solve 
+
+## Problem One
+This is my code for problem one which I unfortunately failed to solve 
+
+```javascript
+const problemOne = (x) => {
+    //  reversing
+    x = String(x)
+    const arr = x.split("")
+    
+    let l = 0
+    let r = arr.length - 1
+    
+    while(l < r){
+        temp = arr[l]
+        arr[l] = arr[r]
+        arr[r] = temp
+        
+        l += 1
+        r -= 1
+    }
+    
+    const newNum = Number(arr.join(""))
+    console.log(newNum)
+    
+    // finding prime factors
+    const primeFactorsArray = []
+    if (newNum / 2 === 0) {
+        primeFactorsArray.push(2)
+    }
+    
+    if (newNum / 3 === 0) {
+        primeFactorsArray.push(3)
+    }
+    
+    let i = 0
+    
+    // prime numbers are represented by 6(n) + 1 or 6(n) - 1 
+    while(true){
+        if (((6 * i) + 1) < newNum) {
+        
+            if ((newNum / ((6 * i) + 1)) === 0) {
+                primeFactorsArray.push(((6 * i) + 1))
+            }
+            if ((newNum / ((6 * i) - 1)) === 0) {
+                primeFactorsArray.push(((6 * i) - 1))
+            }
+        }
+        else {
+            break 
+        }
+        i += 1
+    }
+    
+    console.log(primeFactorsArray)
+    
+    if (primeFactorsArray.length > 0) {
+        return ["YES", primeFactorsArray]
+    } else {
+      return "NO"
+    }
+}
+
+console.log(problemOne(22))
+```
+
